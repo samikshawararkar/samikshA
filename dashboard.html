@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Welcome</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="dashboard-body">
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <span class="logo-text">GreenSpace</span>
+                </div>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul class="nav-list">
+                    <li class="nav-item active">
+                        <a href="#" class="nav-link">
+                            <i class="fas fa-home"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="fas fa-chart-bar"></i>
+                            <span>Analytics</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="fas fa-users"></i>
+                            <span>Team</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="fas fa-project-diagram"></i>
+                            <span>Projects</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="fas fa-calendar"></i>
+                            <span>Calendar</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="fas fa-cog"></i>
+                            <span>Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <div class="user-profile">
+                    <div class="user-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="user-info">
+                        <span class="user-name" id="userName">Demo User</span>
+                        <span class="user-email" id="userEmail">demo@example.com</span>
+                    </div>
+                </div>
+                <button class="logout-btn" onclick="handleLogout()">
+                    <i class="fas fa-sign-out-alt"></i>
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="dashboard-header">
+                <div class="header-left">
+                    <button class="sidebar-toggle" onclick="toggleSidebar()">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h1 class="page-title">Dashboard</h1>
+                </div>
+                <div class="header-right">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search...">
+                    </div>
+                    <button class="notification-btn">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-badge">3</span>
+                    </button>
+                </div>
+            </header>
+
+            <!-- Dashboard Content -->
+            <div class="dashboard-content">
+                <!-- Welcome Section -->
+                <section class="welcome-section">
+                    <div class="welcome-card">
+                        <div class="welcome-text">
+                            <h2>Welcome back! 👋</h2>
+                            <p>Here's what's happening with your projects today.</p>
+                        </div>
+                        <div class="welcome-image">
+                            <div class="botanical-element">
+                                <div class="floating-leaf"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Stats Cards -->
+                <section class="stats-section">
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon green">
+                                <i class="fas fa-project-diagram"></i>
+                            </div>
+                            <div class="stat-content">
+                                <h3 class="stat-number">24</h3>
+                                <p class="stat-label">Active Projects</p>
+                                <span class="stat-change positive">+12% from last month</span>
+                            </div>
+                        </div>
+                        
+                        <div class="stat-card">
+                            <div class="stat-icon blue">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="stat-content">
+                                <h3 class="stat-number">156</h3>
+                                <p class="stat-label">Team Members</p>
+                                <span class="stat-change positive">+8% from last month</span>
+                            </div>
+                        </div>
+                        
+                        <div class="stat-card">
+                            <div class="stat-icon orange">
+                                <i class="fas fa-tasks"></i>
+                            </div>
+                            <div class="stat-content">
+                                <h3 class="stat-number">89</h3>
+                                <p class="stat-label">Completed Tasks</p>
+                                <span class="stat-change positive">+15% from last month</span>
+                            </div>
+                        </div>
+                        
+                        <div class="stat-card">
+                            <div class="stat-icon red">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="stat-content">
+                                <h3 class="stat-number">12</h3>
+                                <p class="stat-label">Pending Reviews</p>
+                                <span class="stat-change negative">-3% from last month</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Recent Activity -->
+                <section class="activity-section">
+                    <div class="section-header">
+                        <h3>Recent Activity</h3>
+                        <a href="#" class="view-all-link">View All</a>
+                    </div>
+                    
+                    <div class="activity-list">
+                        <div class="activity-item">
+                            <div class="activity-avatar">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            <div class="activity-content">
+                                <p><strong>Sarah Johnson</strong> completed the UI design for the mobile app</p>
+                                <span class="activity-time">2 hours ago</span>
+                            </div>
+                            <div class="activity-status completed">
+                                <i class="fas fa-check"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="activity-item">
+                            <div class="activity-avatar">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            <div class="activity-content">
+                                <p><strong>Mike Chen</strong> added 3 new team members to the project</p>
+                                <span class="activity-time">4 hours ago</span>
+                            </div>
+                            <div class="activity-status added">
+                                <i class="fas fa-plus"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="activity-item">
+                            <div class="activity-avatar">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            <div class="activity-content">
+                                <p><strong>Emily Rodriguez</strong> submitted the quarterly report</p>
+                                <span class="activity-time">6 hours ago</span>
+                            </div>
+                            <div class="activity-status submitted">
+                                <i class="fas fa-file-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Quick Actions -->
+                <section class="quick-actions-section">
+                    <div class="section-header">
+                        <h3>Quick Actions</h3>
+                    </div>
+                    
+                    <div class="quick-actions-grid">
+                        <button class="quick-action-btn">
+                            <i class="fas fa-plus"></i>
+                            <span>New Project</span>
+                        </button>
+                        
+                        <button class="quick-action-btn">
+                            <i class="fas fa-user-plus"></i>
+                            <span>Invite Team</span>
+                        </button>
+                        
+                        <button class="quick-action-btn">
+                            <i class="fas fa-file-upload"></i>
+                            <span>Upload Files</span>
+                        </button>
+                        
+                        <button class="quick-action-btn">
+                            <i class="fas fa-calendar-plus"></i>
+                            <span>Schedule Meeting</span>
+                        </button>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>
